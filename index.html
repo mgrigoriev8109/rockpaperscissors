@@ -2,20 +2,20 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset "utf-8" />
     <title>App</title>
 
 </head>
 
 <body>
     <script>
+        
         function getRandomInt(max) {
             return Math.floor(Math.random() * max);
         }
-
         let randomInt = getRandomInt(3);
         console.log(randomInt);
-        let computerSelection ="";
+
         function computerPlay(randomInt) {
                 switch (randomInt){
                     case 0: return 'rock'; break;
@@ -23,36 +23,37 @@
                     case 2: return 'scissors'; break;
                 }
             }
-        console.log(computerPlay(randomInt));
-            //function that randomly returns rock, paper, or scissors;
 
+        let computerSelection = computerPlay(randomInt);
+        let playerSelection = prompt("Do you choose rock, paper, or scissors?");
+        playerSelection = playerSelection.toLowerCase();
 
-        /* //make sure computer play returns one of the three
         function playRound(playerSelection, computerSelection){
             switch(playerSelection){
                 case 'rock':
                     switch(computerSelection){
-                        case 'rock': result="You have tied!"; break;
-                        case 'paper': result="You have lost!"; break;
-                        case 'scissors': result="You have won!"; break;
+                        case 'rock': return "You have tied! Rock ties with rock!"; break;
+                        case 'paper': return "You have lost! Rock loses to paper!"; break;
+                        case 'scissors':return "You have won! Rock beats scissors!"; break;
                     }
                     break;
                 case 'paper':
                 switch(computerSelection){
-                        case 'paper': result="You have tied!"; break;
-                        case 'scissors': result="You have lost!"; break;
-                        case 'rock': result="You have won!"; break;
+                        case 'paper': return "You have tied! Paper ties with paper!"; break;
+                        case 'scissors': return "You have lost! Paper loses to scissors!"; break;
+                        case 'rock': return "You have won! Paper beats rock!"; break;
                     }
                     break;
                 case 'scissors':
                 switch(computerSelection){
-                        case 'scissors': result="You have tied!"; break;
-                        case 'rock': result="You have lost!"; break;
-                        case 'paper': result="You have won!"; break;
+                        case 'scissors': return "You have tied! Scissors ties with scissors!"; break;
+                        case 'rock': return "You have lost! Scissors loses to rock!"; break;
+                        case 'paper': return "You have won! Scissors beats paper!"; break;
                     }
                     break;
             }
-*/
+        }
+        console.log(playRound(playerSelection, computerSelection));
     </script>
 </body>
 </html>
