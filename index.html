@@ -15,14 +15,18 @@
 
         let randomInt = getRandomInt(3);
         console.log(randomInt);
-        
+        let computerSelection ="";
         function computerPlay(randomInt) {
-
+                switch (randomInt){
+                    case 0: return 'rock'; break;
+                    case 1: return 'paper'; break;
+                    case 2: return 'scissors'; break;
+                }
             }
-            //function that randomly returns rock, paper, or scissors;
-        }
-        computerPlay(randomInt);
         console.log(computerPlay(randomInt));
+            //function that randomly returns rock, paper, or scissors;
+
+
         /* //make sure computer play returns one of the three
         function playRound(playerSelection, computerSelection){
             switch(playerSelection){
