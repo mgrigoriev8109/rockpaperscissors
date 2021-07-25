@@ -78,10 +78,14 @@
         
         game()
 */
+
+        const results = document.querySelector('#results');
+
         const rockPlayerBtn = document.querySelector('#rockPlayerBtn');
         rockPlayerBtn.addEventListener('click', () => {
             computerSelection = computerPlay(getRandomInt(3));
-            console.log(playRound('rock', computerSelection));
+            results.textContent = 'And this round... : ' + playRound('rock', computerSelection);
         });
+
 
         
