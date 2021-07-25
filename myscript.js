@@ -87,5 +87,16 @@
             results.textContent = 'And this round... : ' + playRound('rock', computerSelection);
         });
 
+        const paperPlayerBtn = document.querySelector('#paperPlayerBtn');
+        paperPlayerBtn.addEventListener('click', () => {
+            computerSelection = computerPlay(getRandomInt(3));
+            results.textContent = 'And this round... : ' + playRound('paper', computerSelection);
+        });        
+        
+        const scissorsPlayerBtn = document.querySelector('#scissorsPlayerBtn');
+        scissorsPlayerBtn.addEventListener('click', () => {
+            computerSelection = computerPlay(getRandomInt(3));
+            results.textContent = 'And this round... : ' + playRound('scissors', computerSelection);
+        });
 
         
