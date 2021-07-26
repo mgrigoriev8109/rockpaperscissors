@@ -14,3 +14,6 @@ and view the results in the Console. Through developing this project I've learne
 5) How to create switch statements to determine what the computer will play based off of a random integer
   - How to create nested switch statements in order to have each round compare 3 cases of playerSelections with 
     their own switch statements to display and keep track of results based off of 3 possible computerSelections
+6) How to use flexbox, and basic stylistic changes to style a website
+7) How to use querySelector and AddEventListener in javascript in order to create front-end functionality
+8) The basics of arrow functions and callback functions
