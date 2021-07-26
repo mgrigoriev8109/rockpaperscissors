@@ -1,4 +1,6 @@
-           let computerSelection = 0;
+        
+        
+        let computerSelection = 0;
         let playerSelection = "";
         playerSelection = playerSelection.toLowerCase();
         let resultOfRound = "";
@@ -26,22 +28,22 @@
                 case 'rock':
                     switch(computerSelection){
                         case 'rock': resultOfRound = "tie"; return "You have tied! Rock ties with rock!"; break;
-                        case 'paper': resultOfRound = "loss"; return "You have lost! Rock loses to paper!"; break;
-                        case 'scissors':resultOfRound = "win"; return "You have won! Rock beats scissors!"; break;
+                        case 'paper': computerScore++; resultOfRound = "loss"; return "You have lost! Rock loses to paper!"; break;
+                        case 'scissors': playerScore++; resultOfRound = "win"; return "You have won! Rock beats scissors!"; break;
                     }
                     break;
                 case 'paper':
                 switch(computerSelection){
                         case 'paper': resultOfRound = "tie"; return "You have tied! Paper ties with paper!"; break;
-                        case 'scissors': resultOfRound = "loss"; return "You have lost! Paper loses to scissors!"; break;
-                        case 'rock': resultOfRound = "win"; return "You have won! Paper beats rock!"; break;
+                        case 'scissors': computerScore++; resultOfRound = "loss"; return "You have lost! Paper loses to scissors!"; break;
+                        case 'rock': playerScore++; resultOfRound = "win"; return "You have won! Paper beats rock!"; break;
                     }
                     break;
                 case 'scissors':
                 switch(computerSelection){
                         case 'scissors': resultOfRound = "tie"; return "You have tied! Scissors ties with scissors!"; break;
-                        case 'rock': resultOfRound = "loss"; return "You have lost! Scissors loses to rock!"; break;
-                        case 'paper': resultOfRound = "win"; return "You have won! Scissors beats paper!"; break;
+                        case 'rock': computerScore++; resultOfRound = "loss"; return "You have lost! Scissors loses to rock!"; break;
+                        case 'paper': playerScore++; resultOfRound = "win"; return "You have won! Scissors beats paper!"; break;
                     }
                     break;
             }
@@ -80,23 +82,40 @@
 */
 
         const results = document.querySelector('#results');
+        const runningScorePlayer = document.querySelector('#runningScorePlayer');
+        const runningScoreComputer = document.querySelector('#runningScoreComputer');
 
         const rockPlayerBtn = document.querySelector('#rockPlayerBtn');
         rockPlayerBtn.addEventListener('click', () => {
             computerSelection = computerPlay(getRandomInt(3));
             results.textContent = 'And this round... : ' + playRound('rock', computerSelection);
+            if (resultOfRound=="win") {
+                runningScorePlayer.textContent = 'Your Score: ' + playerScore;
+            } else if (resultOfRound=="loss") {
+                runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+            }
         });
 
         const paperPlayerBtn = document.querySelector('#paperPlayerBtn');
         paperPlayerBtn.addEventListener('click', () => {
             computerSelection = computerPlay(getRandomInt(3));
             results.textContent = 'And this round... : ' + playRound('paper', computerSelection);
+            if (resultOfRound=="win") {
+                runningScorePlayer.textContent = 'Your Score: ' + playerScore;
+            } else if (resultOfRound=="loss") {
+                runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+            }
         });        
         
         const scissorsPlayerBtn = document.querySelector('#scissorsPlayerBtn');
         scissorsPlayerBtn.addEventListener('click', () => {
             computerSelection = computerPlay(getRandomInt(3));
             results.textContent = 'And this round... : ' + playRound('scissors', computerSelection);
+            if (resultOfRound=="win") {
+                runningScorePlayer.textContent = 'Your Score: ' + playerScore;
+            } else if (resultOfRound=="loss") {
+                runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+            }
         });
 
         
