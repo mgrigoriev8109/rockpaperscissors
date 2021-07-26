@@ -84,37 +84,59 @@
         const results = document.querySelector('#results');
         const runningScorePlayer = document.querySelector('#runningScorePlayer');
         const runningScoreComputer = document.querySelector('#runningScoreComputer');
-
         const rockPlayerBtn = document.querySelector('#rockPlayerBtn');
+        const paperPlayerBtn = document.querySelector('#paperPlayerBtn');
+        const scissorsPlayerBtn = document.querySelector('#scissorsPlayerBtn');
+        const finalWinner = document.querySelector('#finalWinner');
+
         rockPlayerBtn.addEventListener('click', () => {
             computerSelection = computerPlay(getRandomInt(3));
             results.textContent = 'And this round... : ' + playRound('rock', computerSelection);
-            if (resultOfRound=="win") {
+            
+            if (resultOfRound=="win" && playerScore<5) {
                 runningScorePlayer.textContent = 'Your Score: ' + playerScore;
-            } else if (resultOfRound=="loss") {
+            } else if (resultOfRound=="loss" && computerScore<5) {
                 runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+            } else if (playerScore==5) {
+                runningScorePlayer.textContent = 'Your Score: ' + playerScore;
+                finalWinner.textContent = "You have won after five rounds!";
+            } else if (computerScore==5) { 
+                runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+                finalWinner.textContent = "The Computer has won after five rounds!";
             }
         });
 
-        const paperPlayerBtn = document.querySelector('#paperPlayerBtn');
         paperPlayerBtn.addEventListener('click', () => {
             computerSelection = computerPlay(getRandomInt(3));
             results.textContent = 'And this round... : ' + playRound('paper', computerSelection);
-            if (resultOfRound=="win") {
+            
+            if (resultOfRound=="win" && playerScore<5) {
                 runningScorePlayer.textContent = 'Your Score: ' + playerScore;
-            } else if (resultOfRound=="loss") {
+            } else if (resultOfRound=="loss" && computerScore<5) {
                 runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+            } else if (playerScore==5) {
+                runningScorePlayer.textContent = 'Your Score: ' + playerScore;
+                finalWinner.textContent = "You have won after five rounds!";
+            } else if (computerScore==5){ 
+                runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+                finalWinner.textContent = "The Computer has won after five rounds!";
             }
         });        
         
-        const scissorsPlayerBtn = document.querySelector('#scissorsPlayerBtn');
         scissorsPlayerBtn.addEventListener('click', () => {
             computerSelection = computerPlay(getRandomInt(3));
             results.textContent = 'And this round... : ' + playRound('scissors', computerSelection);
-            if (resultOfRound=="win") {
+            
+            if (resultOfRound=="win" && playerScore<5) {
                 runningScorePlayer.textContent = 'Your Score: ' + playerScore;
-            } else if (resultOfRound=="loss") {
+            } else if (resultOfRound=="loss" && computerScore<5) {
                 runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+            } else if (playerScore==5) {
+                runningScorePlayer.textContent = 'Your Score: ' + playerScore;
+                finalWinner.textContent = "You have won after five rounds!";
+            } else if (computerScore==5) { 
+                runningScoreComputer.textContent = 'Computer Score: ' +computerScore;
+                finalWinner.textContent = "The Computer has won after five rounds!";
             }
         });
 
