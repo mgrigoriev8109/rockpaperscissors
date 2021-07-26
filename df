@@ -1,0 +1,53 @@
+[33mcommit 6b22a950e63e603752159f92ae3e312b08857d77[m[33m ([m[1;36mHEAD -> [m[1;32mrps-ui[m[33m, [m[1;31morigin/rps-ui[m[33m)[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Sun Jul 25 00:06:53 2021 -0400
+
+    fixed button id typo scissorsPlayerBtn, and added javascript functionality to the remaining two buttons
+
+[33mcommit 59d23ddd64862e943b220f259c079bd02721b9a9[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Sun Jul 25 00:03:09 2021 -0400
+
+    rockPlayerBtn now adds .textContent through javascript to a newly created #results <div>
+
+[33mcommit b6fd96d18d010f3d5f40e7d763d8bbd54593ac53[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Sat Jul 24 23:49:39 2021 -0400
+
+    Fixed external js link with defer, fixed button id names, created addEventListener for rockPlayerBtn to run playRound() and console.log() the results
+
+[33mcommit 3dedfc565b0dec15d891084102887ffb5bc69f19[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Sat Jul 24 23:30:55 2021 -0400
+
+    Moved javascript to an external file and temporarily commented out the  game() function to play five rounds
+
+[33mcommit 9df0e3961282fa584d19bd82403efff9d48720b7[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Mon Jul 19 10:27:51 2021 -0400
+
+    game() function finished, program runs successfully in the Console 5 times in a row and displays winner, modified code with comments
+
+[33mcommit 5d77a5fc2b19952aa07a23447e9d1fd4007dd679[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Mon Jul 19 10:01:24 2021 -0400
+
+    modified playRound function to keep track of round results, added variables to keep track of round results, created game() function to run the rounds 5 times, but function does not yet ask for user input 5 individual times.
+
+[33mcommit c858adb6ed923cced024041c13bbe19890ede462[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Mon Jul 19 00:01:34 2021 -0400
+
+    created playRound function, which uses switch to compare user choice of rock paper scissors to random computer choice, and declares winner or loser
+
+[33mcommit d662fabe3f682a1c51f62b8ec1c373597c9c6732[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Sun Jul 18 23:45:50 2021 -0400
+
+    Fixed computerPlay function, which received random integer as input and returns a value of Rock, Paper, or Scissors
+
+[33mcommit ce41e43cd9309c06253869c3183f00dbbbf872c9[m
+Author: Mikhail <mikhailgrigoriev92@gmail.com>
+Date:   Sun Jul 18 23:30:04 2021 -0400
+
+    Created function to get random integer for computer choice, began creating switch function for player choice interacting with computer choice
